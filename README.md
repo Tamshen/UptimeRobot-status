@@ -60,3 +60,7 @@ addEventListener('fetch', (event) => {
 修改 `config.js` 中的 `ApiDomian` 为你的域名；
 
 Modify `ApiDomian` in `config.js` to your domain;
+
+
+### update log
+20211010-更新了css样式

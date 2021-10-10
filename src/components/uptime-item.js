@@ -22,9 +22,15 @@ const UptimeItem = (props) => {
       : `最近 ${CountDays} 天可用率 ${monitor.average}%`;
   }, [CountDays, monitor]);
 
+  const stars = useMemo(() => {
+    return monitor.daily[monitor.daily.length - CountDays].date;
+  }, [monitor]);
+
   const initial = useMemo(() => {
     return monitor.daily[monitor.daily.length - 1].date;
   }, [monitor]);
+
+  
 
   return (
     <div className="item">
@@ -42,7 +48,7 @@ const UptimeItem = (props) => {
       </div>
       <ReactTooltip className="tooltip" place="top" type="dark" effect="solid" />
       <div className="foot">
-        <span>今天</span>
+        <span>{stars.format('YYYY-MM-DD')}(今天)</span>
         <span>{total}</span>
         <span>{initial.format('YYYY-MM-DD')}</span>
       </div>
