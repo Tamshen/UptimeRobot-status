@@ -62,5 +62,13 @@ addEventListener('fetch', (event) => {
 Modify `ApiDomian` in `config.js` to your domain;
 
 
+### githubpage 食用方法
+1.fork本仓库
+2.去 Cloudflare Workers  创建，用上面的代码记得修改你的 UptimeRobot key
+3.修改fork分支 build 分支的 config.js 配置信息
+4.setting-page-开启页面设置build分支-root/
+
 ### update log
 20211010-更新了css样式
+
+
